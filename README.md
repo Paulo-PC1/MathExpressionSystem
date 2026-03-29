@@ -20,7 +20,8 @@ Op.	Ação	O que o sistema faz
 Requisitos técnicos obrigatórios
 
     •Busca binária no histórico ordenado por resultado numérico para localizar expressões anteriores (opção 3).
-    • Ordenação do histórico por resultado usando Selection Sort, Bubble Sort ou Quicksort. Se usar Quicksort, a implementação já cumpre o requisito de recursão e o grupo deve explicar o algoritmo no seminário, comparando seu O(n log n) com o O(n²) dos demais.
+    • Ordenação do histórico por resultado usando Selection Sort, Bubble Sort ou Quicksort. 
+      Se usar Quicksort, a implementação já cumpre o requisito de recursão e o grupo deve explicar o algoritmo no seminário, comparando seu O(n log n) com o O(n²) dos demais.
     • Recursão obrigatória na avaliação da expressão — a função que calcula o resultado deve ser recursiva, processando a expressão operador por operador (opção 1).
     • Pilha para processar os operadores e operandos durante a avaliação da expressão matemática.
     • Análise de complexidade Big-O do algoritmo de avaliação e das operações de busca e ordenação no histórico, apresentada no seminário.
