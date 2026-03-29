@@ -10,6 +10,7 @@ O sistema recebe uma expressão matemática como string (ex.: 3 + 5 * 2), valida
 Menu do sistema
 
 Op.	Ação	O que o sistema faz
+
 1	Avaliar expressão = Recebe uma expressão como texto, valida, calcula recursivamente e exibe o resultado.
 
 2	Exibir histórico = Lista todas as expressões calculadas na sessão com seus resultados.
