@@ -11,10 +11,15 @@ Menu do sistema
 
 Op.	Ação	O que o sistema faz
 1	Avaliar expressão = Recebe uma expressão como texto, valida, calcula recursivamente e exibe o resultado.
+
 2	Exibir histórico = Lista todas as expressões calculadas na sessão com seus resultados.
+
 3	Buscar por resultado = Localiza expressões no histórico via busca binária (histórico ordenado por resultado).
+
 4	Ordenar histórico =	Ordena o histórico por resultado numérico para permitir busca binária.
+
 5	Limpar histórico =	Remove todas as expressões do histórico da sessão.
+
 0	Sair = Encerra o programa.
 
 Requisitos técnicos obrigatórios
