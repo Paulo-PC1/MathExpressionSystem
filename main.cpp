@@ -103,9 +103,10 @@ double aplicarOperador(double a, double b,char op) {
         case '-': return a - b;
         case '*': return a * b;
         case '/':
-            if (b == 0)
-                cout <<"Divisao por zero";
-
+            if (b == 0){
+                cout << "Divisao por zero\n";
+                return 0;
+            }
             return a / b;
     }
 
