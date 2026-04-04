@@ -38,7 +38,7 @@ string infixoParaPosfixo(const string& expressao){
     stack<char> operadores;
     string saida;
 
-    for (int i = 0; i < expressao.size(); i++) {
+    for (int i = 0; i < expressao.size(); ++i) {
 
         char c = expressao[i];
 
@@ -47,11 +47,11 @@ string infixoParaPosfixo(const string& expressao){
 
             while (i < expressao.size() && isdigit(expressao[i])) {
                 saida += expressao[i];
-                i++;
+                ++i;
             }
 
             saida += ' ';
-            i--;
+            --i;
         }
 
         else if(c == '('){
@@ -60,8 +60,7 @@ string infixoParaPosfixo(const string& expressao){
 
         else if (c == ')') {
 
-            while(!operadores.empty() &&
-                  operadores.top() != '('){
+            while(!operadores.empty() && operadores.top() != '('){
 
                 saida += operadores.top();
                 saida += ' ';
@@ -71,11 +70,9 @@ string infixoParaPosfixo(const string& expressao){
             operadores.pop();
         }
 
-        else if(c == '+' || c == '-' ||
-                c == '*' || c == '/'){
+        else if(c == '+' || c == '-' || c == '*' || c == '/'){
 
-            while(!operadores.empty() &&
-                  precedencia(operadores.top()) >= precedencia(c)){
+            while(!operadores.empty() && precedencia(operadores.top()) >= precedencia(c)){
 
                 saida += operadores.top();
                 saida += ' ';
@@ -140,8 +137,7 @@ double avaliarPosfixa(const string& expressao) {
             double a = pilha.top();
             pilha.pop();
 
-            double resultado =
-                aplicarOperador(a, b, c);
+            double resultado = aplicarOperador(a, b, c);
 
             pilha.push(resultado);
         }
@@ -157,8 +153,7 @@ double avaliarExpressao(const string& expressao) {
         return 0;
     }
 
-    string posfixa =
-        infixoParaPosfixo(expressao);
+    string posfixa = infixoParaPosfixo(expressao);
 
     return avaliarPosfixa(posfixa);
 }
